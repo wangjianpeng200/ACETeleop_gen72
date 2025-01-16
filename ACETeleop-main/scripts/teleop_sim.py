@@ -358,6 +358,7 @@ def main() -> None:
                 simulator.step(cmd, np2tensor(latest, simulator.device))
             else:
                 cmd = teleoperator.step()
+                print("Non-debug mode cmd:", cmd)
                 simulator.step(cmd)
     except KeyboardInterrupt:
         simulator.end()

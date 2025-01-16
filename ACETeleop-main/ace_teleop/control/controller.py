@@ -128,8 +128,8 @@ class ACEController:
             left_wrist, self.left_wrist_pos_filter, self.left_wrist_rot_filter
         )
         # 打印 left_wrist 矩阵
-        print("Left Wrist Transformation Matrix:")
-        print("滤波后的手腕信息",left_wrist)
+        # print("Left Wrist Transformation Matrix:")
+        # print("滤波后的手腕信息",left_wrist)
         right_wrist = wrist_filters(
             right_wrist, self.right_wrist_pos_filter, self.right_wrist_rot_filter
         )
@@ -143,8 +143,8 @@ class ACEController:
         )
 
         # 打印 left_arm_qpos 数组
-        print("Left Arm Joint Positions (qpos):")
-        print("滤波后的手腕信息",left_arm_qpos)
+        # print("Left Arm Joint Positions (qpos):")
+        # print("滤波后的手腕信息",left_arm_qpos)
 
         left_fingertip_pos = self.left_fingertip_pos_filter.next(left_fingertip_pos)
         right_fingertip_pos = self.right_fingertip_pos_filter.next(right_fingertip_pos)
